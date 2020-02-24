@@ -329,7 +329,6 @@ public class QtiCallConstants {
     public static final int AUTO_REJECT_CALL_ENABLED = 1;
     // Auto reject call UI item, avoid conflicting values from ImsCallUtils.ConfigItem
     public static final int AUTO_REJECT_CALL_MODE = 1000;
-
     /**
      * Constants used by clients as part of registration status change indication.
      * Below constants will be notified when modem is unable to get the geo location information.
@@ -344,5 +343,44 @@ public class QtiCallConstants {
     public static final int REG_ERROR_GEO_LOCATION_STATUS_ENGINE_LOCK = 2002;
     // This is success case, received when all the GPS errors are resolved.
     public static final int REG_ERROR_GEO_LOCATION_STATUS_RESOLVED = 2003;
+
+    /**
+     * Key values for the Call Composer elements sent through the dial request
+     */
+    // set for MT call composer call
+    // Type: int
+    public static String EXTRA_CALL_COMPOSER_TOKEN = "call_composer_token";
+
+    // set when a call composer call is dialed
+    public static String EXTRA_CALL_COMPOSER_INFO = "call_composer_info";
+
+    // set when subject is added to call composer call
+    // Type: String
+    public static final String EXTRA_CALL_COMPOSER_SUBJECT = "call_composer_subject";
+
+    // set when priority is added to call composer call
+    // Type: int (0 for urgent, 1 for normal)
+    public static String EXTRA_CALL_COMPOSER_PRIORITY = "call_composer_priority";
+
+    // set when image url is added to call composer call
+    // Type: parcelable Uri
+    public static String EXTRA_CALL_COMPOSER_IMAGE = "call_composer_image";
+
+    // set when location is added to call composer call
+    // Type: boolean
+    public static String EXTRA_CALL_COMPOSER_LOCATION = "call_composer_location";
+
+    // set for circle location
+    // Type: float
+    public static String EXTRA_CALL_COMPOSER_LOCATION_RADIUS = "call_composer_location_radius";
+
+    // latitude of the location for the call composer call
+    // Type: double
+    public static String EXTRA_CALL_COMPOSER_LOCATION_LATITUDE = "call_composer_location_latitude";
+
+    // longitude of the location for the call composer call
+    // Type: double
+    public static String EXTRA_CALL_COMPOSER_LOCATION_LONGITUDE =
+            "call_composer_location_longitude";
 }
 
